@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hàm trả về số nhỏ nhất trong 3 số</title>
+</head>
+<body>
+<p>Hàm trả về số nhỏ nhất trong 3 số</p>
+<button onclick="inputNumeric()">Nhập vào 3 số</button>
+<script type="text/javascript">
+	function inputNumeric() {
+		let arrNumber = [];
+		while(arrNumber.length < 3){
+			let enterNumber = Number(prompt('Enter a number'));
+			arrNumber.push(enterNumber);
+		}
+		let check = arrNumber[0];
+		for (let i = 0; i < arrNumber.length; i++) {
+			if(check > arrNumber[i]){
+				check = arrNumber[i];
+			}
+		}
+		alert('Bạn vừa nhập vào 3 số: '+arrNumber.join(', ')+'\nSố nhỏ nhất là: ' + check);
+	}
+</script>
+</body>
+</html>
